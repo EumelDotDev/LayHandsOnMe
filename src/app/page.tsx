@@ -196,16 +196,23 @@ export default function Home() {
       </section>
 
       {/* Connect CTA Banner */}
-      <section className="pt-16 pb-32 px-8 md:px-16">
-        <div className="max-w-6xl mx-auto w-full bg-white/[0.02] border border-white/10 p-12 md:p-24 text-center relative overflow-hidden group hover:border-caramel/40 transition-colors duration-500">
-          <div className="absolute inset-0 bg-gradient-to-t from-caramel/5 to-transparent z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="relative z-10 flex flex-col items-center">
-            <h2 className="font-serif text-4xl md:text-6xl font-light mb-6">Let's continue the conversation.</h2>
-            <p className="font-sans text-sm text-white/60 mb-12 max-w-xl mx-auto leading-relaxed">Have a specific question about intimacy, or want to invite the minister to speak? Reach out directly and join our community.</p>
-            <Link href="/connect" className="inline-block bg-caramel hover:bg-white text-black px-10 py-4 font-sans text-xs uppercase tracking-widest font-semibold transition-colors">
-              Connect With Us
-            </Link>
-          </div>
+      <section className="relative w-full py-32 md:py-48 flex items-center justify-center overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/cta_banner.jpg"
+            alt="Let's continue the conversation"
+            fill
+            className="object-cover object-center opacity-40 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black"></div>
+        </div>
+        
+        <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl mx-auto">
+          <h2 className="font-serif text-4xl md:text-6xl font-light mb-6 text-white">Let's continue the conversation.</h2>
+          <p className="font-sans text-sm md:text-base text-white/60 mb-12 max-w-xl mx-auto leading-relaxed">Have a specific question about intimacy, or want to invite the minister to speak? Reach out directly and join our community.</p>
+          <Link href="/connect" className="inline-block bg-caramel hover:bg-white text-black px-12 py-5 rounded-full font-sans text-xs uppercase tracking-widest font-semibold transition-colors shadow-xl">
+            Connect With Us
+          </Link>
         </div>
       </section>
     </div>
