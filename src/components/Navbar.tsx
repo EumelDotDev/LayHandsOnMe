@@ -13,7 +13,6 @@ export default function Navbar() {
         </div>
       </Link>
       <nav className="hidden lg:flex gap-10 font-sans tracking-widest text-[11px] uppercase opacity-80">
-        <Link href="/" className="hover:text-caramel hover:opacity-100 transition-colors">Home</Link>
         <Link href="/episodes" className="hover:text-caramel hover:opacity-100 transition-colors">Episodes</Link>
         <Link href="/about" className="hover:text-caramel hover:opacity-100 transition-colors">About</Link>
         <Link href="/altar" className="hover:text-caramel hover:opacity-100 transition-colors">The Altar</Link>
