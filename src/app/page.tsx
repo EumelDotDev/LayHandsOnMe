@@ -73,13 +73,28 @@ export default function Home() {
       {/* Spacer to account for overlapping player */}
       <div className="h-32 md:h-24"></div>
 
-      {/* The Philosophy */}
-      <section className="py-40 px-8 md:px-16 max-w-5xl mx-auto text-center relative">
+      {/* The Philosophy & Resources */}
+      <section className="py-32 px-8 md:px-16 max-w-5xl mx-auto text-center relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-caramel/50"></div>
         <h2 className="font-serif text-3xl md:text-5xl text-caramel mb-12 mt-12 font-light">The Altar of Intimacy</h2>
-        <p className="font-sans text-xl md:text-3xl leading-relaxed text-white/80 font-light">
+        <p className="font-sans text-xl md:text-3xl leading-relaxed text-white/80 font-light mb-24">
           "The altar is not just a place of spiritual healing. It is the space between two people committed to each other. When we lay hands, we connect flesh and spirit, returning to the very foundation of our vows."
         </p>
+
+        {/* Intimacy Resources */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div className="p-12 border border-white/10 hover:border-caramel/40 transition-all duration-500 bg-white/[0.02] group">
+            <h3 className="font-serif text-3xl mb-6 group-hover:text-caramel transition-colors font-light">The Intimacy Guide</h3>
+            <p className="font-sans text-sm text-white/50 mb-12 leading-relaxed">A 30-day guided journal for couples to explore non-sexual touch, vulnerability, and spiritual alignment outside the bedroom.</p>
+            <button className="font-sans text-[10px] uppercase tracking-[0.2em] text-caramel border-b border-caramel/30 pb-2 hover:border-caramel hover:text-white transition-colors w-max">Download PDF</button>
+          </div>
+          
+          <div className="p-12 border border-white/10 hover:border-caramel/40 transition-all duration-500 bg-white/[0.02] group">
+            <h3 className="font-serif text-3xl mb-6 group-hover:text-caramel transition-colors font-light">Vows & Intentions</h3>
+            <p className="font-sans text-sm text-white/50 mb-12 leading-relaxed">A framework for rewriting your vows not as promises for the future, but as daily, physical practices for the present moment.</p>
+            <button className="font-sans text-[10px] uppercase tracking-[0.2em] text-caramel border-b border-caramel/30 pb-2 hover:border-caramel hover:text-white transition-colors w-max">Read Article</button>
+          </div>
+        </div>
       </section>
 
       {/* Recent Episodes */}
@@ -158,6 +173,39 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-32 px-8 md:px-16 max-w-4xl mx-auto w-full border-t border-white/10">
+        <h2 className="font-serif text-4xl md:text-5xl font-light text-center mb-16">Common Questions</h2>
+        <div className="space-y-8">
+          <div className="border-b border-white/10 pb-8">
+            <h3 className="font-serif text-2xl text-caramel mb-4">Who is this podcast for?</h3>
+            <p className="font-sans text-sm text-white/60 leading-relaxed">This podcast is explicitly designed for married couples who want to deepen their connection. While it touches on spiritual themes, it is entirely focused on practical, physical intimacy and vulnerability rather than religious dogma.</p>
+          </div>
+          <div className="border-b border-white/10 pb-8">
+            <h3 className="font-serif text-2xl text-caramel mb-4">What does "Lay Hands on Me" mean?</h3>
+            <p className="font-sans text-sm text-white/60 leading-relaxed">Traditionally, an altar call involves laying hands on someone for spiritual healing. We believe the same physical intention should be brought into your marriage to foster emotional and physical healing through non-sexual and sexual touch.</p>
+          </div>
+          <div className="border-b border-white/10 pb-8 border-none">
+            <h3 className="font-serif text-2xl text-caramel mb-4">When do new episodes release?</h3>
+            <p className="font-sans text-sm text-white/60 leading-relaxed">New conversations drop every Thursday morning. You can stream them on Spotify, Apple Podcasts, and SoundCloud.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect CTA Banner */}
+      <section className="pt-16 pb-32 px-8 md:px-16">
+        <div className="max-w-6xl mx-auto w-full bg-white/[0.02] border border-white/10 p-12 md:p-24 text-center relative overflow-hidden group hover:border-caramel/40 transition-colors duration-500">
+          <div className="absolute inset-0 bg-gradient-to-t from-caramel/5 to-transparent z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="relative z-10 flex flex-col items-center">
+            <h2 className="font-serif text-4xl md:text-6xl font-light mb-6">Let's continue the conversation.</h2>
+            <p className="font-sans text-sm text-white/60 mb-12 max-w-xl mx-auto leading-relaxed">Have a specific question about intimacy, or want to invite the minister to speak? Reach out directly and join our community.</p>
+            <Link href="/connect" className="inline-block bg-caramel hover:bg-white text-black px-10 py-4 font-sans text-xs uppercase tracking-widest font-semibold transition-colors">
+              Connect With Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>

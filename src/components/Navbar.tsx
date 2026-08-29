@@ -15,7 +15,6 @@ export default function Navbar() {
       <nav className="hidden lg:flex gap-10 font-sans tracking-widest text-[11px] uppercase opacity-80">
         <Link href="/episodes" className="hover:text-caramel hover:opacity-100 transition-colors">Episodes</Link>
         <Link href="/about" className="hover:text-caramel hover:opacity-100 transition-colors">About</Link>
-        <Link href="/altar" className="hover:text-caramel hover:opacity-100 transition-colors">The Altar</Link>
         <Link href="/connect" className="hover:text-caramel hover:opacity-100 transition-colors">Connect</Link>
       </nav>
       <Link href="/episodes" className="hidden md:inline-flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.2em] border border-caramel/50 px-8 py-4 rounded-full transition-all text-caramel hover:bg-caramel hover:text-black group">
