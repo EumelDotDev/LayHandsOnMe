@@ -1,69 +1,131 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="flex flex-col min-h-screen -mt-32">
+      {/* Hero Section */}
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-black">
+          <Image
+            src="/hero_hands.jpg"
+            alt="Intimate connection"
+            fill
+            className="object-cover object-center opacity-50 mix-blend-luminosity"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center mt-20">
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-[9rem] leading-none tracking-tight text-white mb-8">
+            Lay Hands <br /> <span className="italic text-caramel font-light">on Me</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="font-sans text-xs md:text-sm uppercase tracking-[0.4em] text-white/60 mb-12 max-w-xl mx-auto leading-relaxed">
+            Where spiritual depth meets physical intimacy. A podcast for the married couple.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/episodes"
+            className="group relative inline-flex items-center justify-center font-sans text-xs uppercase tracking-[0.2em] px-10 py-5 rounded-full overflow-hidden transition-all bg-caramel text-black hover:bg-white"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <span className="relative z-10 flex items-center gap-4 font-semibold">
+              Listen to the Latest
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </Link>
         </div>
-      </main>
+      </section>
+
+      {/* The Philosophy */}
+      <section className="py-40 px-8 md:px-16 max-w-5xl mx-auto text-center relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-caramel/50"></div>
+        <h2 className="font-serif text-3xl md:text-5xl text-caramel mb-12 mt-12 font-light">The Altar of Intimacy</h2>
+        <p className="font-sans text-xl md:text-3xl leading-relaxed text-white/80 font-light">
+          "The altar is not just a place of spiritual healing. It is the space between two people committed to each other. When we lay hands, we connect flesh and spirit, returning to the very foundation of our vows."
+        </p>
+      </section>
+
+      {/* Recent Episodes */}
+      <section className="py-32 px-8 md:px-16 max-w-6xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8 gap-8">
+          <h2 className="font-serif text-5xl md:text-6xl font-light">Recent Episodes</h2>
+          <Link href="/episodes" className="font-sans text-xs uppercase tracking-[0.2em] text-caramel hover:text-white transition-colors flex items-center gap-2 pb-2">
+            View All Archive
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          {/* Episode Row 1 */}
+          <div className="group flex flex-col md:flex-row gap-8 md:gap-12 items-center py-10 border-b border-white/5 hover:border-caramel/40 transition-colors">
+            <div className="w-20 h-20 rounded-full border border-caramel/30 flex items-center justify-center group-hover:bg-caramel group-hover:text-black transition-all shrink-0 cursor-pointer">
+              <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <div className="font-sans text-[10px] uppercase tracking-[0.3em] text-caramel mb-4 flex items-center gap-4">
+                <span>Episode 003</span>
+                <span className="w-8 h-px bg-caramel/30"></span>
+                <span>Oct 12</span>
+              </div>
+              <h3 className="font-serif text-3xl md:text-4xl group-hover:text-caramel transition-colors font-light">The Vulnerability of Touch</h3>
+              <p className="font-sans text-sm text-white/50 mt-4 max-w-2xl leading-relaxed">Why non-sexual touch is the missing foundation in modern marriages, and how to reclaim it at the end of a long day when the world has drained you.</p>
+            </div>
+            <div className="shrink-0 font-sans text-xs tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity">
+              42 MIN
+            </div>
+          </div>
+
+          {/* Episode Row 2 */}
+          <div className="group flex flex-col md:flex-row gap-8 md:gap-12 items-center py-10 border-b border-white/5 hover:border-caramel/40 transition-colors">
+            <div className="w-20 h-20 rounded-full border border-caramel/30 flex items-center justify-center group-hover:bg-caramel group-hover:text-black transition-all shrink-0 cursor-pointer">
+              <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <div className="font-sans text-[10px] uppercase tracking-[0.3em] text-caramel mb-4 flex items-center gap-4">
+                <span>Episode 002</span>
+                <span className="w-8 h-px bg-caramel/30"></span>
+                <span>Oct 05</span>
+              </div>
+              <h3 className="font-serif text-3xl md:text-4xl group-hover:text-caramel transition-colors font-light">Sacred vs. Secular Romance</h3>
+              <p className="font-sans text-sm text-white/50 mt-4 max-w-2xl leading-relaxed">Deconstructing the religious guilt around intimacy and finding the divine in physical connection without shame or hesitation.</p>
+            </div>
+            <div className="shrink-0 font-sans text-xs tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity">
+              38 MIN
+            </div>
+          </div>
+          
+          {/* Episode Row 3 */}
+          <div className="group flex flex-col md:flex-row gap-8 md:gap-12 items-center py-10 border-b border-white/5 hover:border-caramel/40 transition-colors">
+            <div className="w-20 h-20 rounded-full border border-caramel/30 flex items-center justify-center group-hover:bg-caramel group-hover:text-black transition-all shrink-0 cursor-pointer">
+              <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <div className="font-sans text-[10px] uppercase tracking-[0.3em] text-caramel mb-4 flex items-center gap-4">
+                <span>Episode 001</span>
+                <span className="w-8 h-px bg-caramel/30"></span>
+                <span>Sep 28</span>
+              </div>
+              <h3 className="font-serif text-3xl md:text-4xl group-hover:text-caramel transition-colors font-light">The Alter Call</h3>
+              <p className="font-sans text-sm text-white/50 mt-4 max-w-2xl leading-relaxed">Introducing the thesis of the podcast. What it means to truly lay hands on each other in marriage and why this is our most profound calling.</p>
+            </div>
+            <div className="shrink-0 font-sans text-xs tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity">
+              51 MIN
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
