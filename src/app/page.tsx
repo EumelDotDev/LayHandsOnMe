@@ -179,19 +179,48 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="py-32 px-8 md:px-16 max-w-4xl mx-auto w-full border-t border-white/10">
         <h2 className="font-serif text-4xl md:text-5xl font-light text-center mb-16">Common Questions</h2>
-        <div className="space-y-8">
-          <div className="border-b border-white/10 pb-8">
-            <h3 className="font-serif text-2xl text-caramel mb-4">Who is this podcast for?</h3>
-            <p className="font-sans text-sm text-white/60 leading-relaxed">This podcast is explicitly designed for married couples who want to deepen their connection. While it touches on spiritual themes, it is entirely focused on practical, physical intimacy and vulnerability rather than religious dogma.</p>
-          </div>
-          <div className="border-b border-white/10 pb-8">
-            <h3 className="font-serif text-2xl text-caramel mb-4">What does "Lay Hands on Me" mean?</h3>
-            <p className="font-sans text-sm text-white/60 leading-relaxed">Traditionally, an altar call involves laying hands on someone for spiritual healing. We believe the same physical intention should be brought into your marriage to foster emotional and physical healing through non-sexual and sexual touch.</p>
-          </div>
-          <div className="border-b border-white/10 pb-8 border-none">
-            <h3 className="font-serif text-2xl text-caramel mb-4">When do new episodes release?</h3>
-            <p className="font-sans text-sm text-white/60 leading-relaxed">New conversations drop every Thursday morning. You can stream them on Spotify, Apple Podcasts, and SoundCloud.</p>
-          </div>
+        <div className="space-y-2">
+          <details className="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer items-center justify-between py-6 font-serif text-2xl text-white hover:text-caramel transition-colors">
+              Who is this podcast for?
+              <span className="relative ml-4 shrink-0 transition-transform duration-300 group-open:rotate-45 text-caramel">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </span>
+            </summary>
+            <div className="pb-8 pt-2">
+              <p className="font-sans text-sm text-white/60 leading-relaxed max-w-3xl">This podcast is explicitly designed for married couples who want to deepen their connection. While it touches on spiritual themes, it is entirely focused on practical, physical intimacy and vulnerability rather than religious dogma.</p>
+            </div>
+          </details>
+          
+          <details className="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer items-center justify-between py-6 font-serif text-2xl text-white hover:text-caramel transition-colors">
+              What does "Lay Hands on Me" mean?
+              <span className="relative ml-4 shrink-0 transition-transform duration-300 group-open:rotate-45 text-caramel">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </span>
+            </summary>
+            <div className="pb-8 pt-2">
+              <p className="font-sans text-sm text-white/60 leading-relaxed max-w-3xl">Traditionally, an altar call involves laying hands on someone for spiritual healing. We believe the same physical intention should be brought into your marriage to foster emotional and physical healing through non-sexual and sexual touch.</p>
+            </div>
+          </details>
+          
+          <details className="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer items-center justify-between py-6 font-serif text-2xl text-white hover:text-caramel transition-colors">
+              When do new episodes release?
+              <span className="relative ml-4 shrink-0 transition-transform duration-300 group-open:rotate-45 text-caramel">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </span>
+            </summary>
+            <div className="pb-8 pt-2">
+              <p className="font-sans text-sm text-white/60 leading-relaxed max-w-3xl">New conversations drop every Thursday morning. You can stream them on Spotify, Apple Podcasts, and SoundCloud.</p>
+            </div>
+          </details>
         </div>
       </section>
 
