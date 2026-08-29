@@ -19,9 +19,9 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center mt-12 md:mt-24">
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] leading-[0.9] tracking-tight text-white mb-6 relative">
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] leading-none md:leading-[0.9] tracking-tight text-white mb-6 relative">
             Lay Hands <br /> 
-            <span className="italic text-caramel font-light inline-block transform -translate-y-2 md:-translate-y-8 drop-shadow-xl">on Me</span>
+            <span className="italic text-caramel font-light inline-block transform -translate-y-2 md:-translate-y-4 lg:-translate-y-8 drop-shadow-xl">on Me</span>
           </h1>
           <p className="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg font-semibold">
             Where spiritual depth meets physical intimacy. A podcast for the married couple.
@@ -46,19 +46,19 @@ export default function Home() {
         
         {/* Overlapping Audio Player */}
         <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-4 md:px-8 transform translate-y-1/2">
-          <div className="bg-black/80 backdrop-blur-xl text-white rounded-sm shadow-2xl p-6 md:p-8 w-full max-w-5xl flex flex-col md:flex-row items-center gap-8 border border-caramel/30">
-            <button className="w-16 h-16 rounded-full bg-caramel text-black flex items-center justify-center shrink-0 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(198,139,89,0.3)] group">
-              <svg className="w-6 h-6 ml-1 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+          <div className="bg-black/80 backdrop-blur-xl text-white rounded-sm shadow-2xl p-4 md:p-8 w-full max-w-5xl flex flex-row items-center gap-4 md:gap-8 border border-caramel/30">
+            <button className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-caramel text-black flex items-center justify-center shrink-0 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(198,139,89,0.3)] group">
+              <svg className="w-5 h-5 md:w-6 md:h-6 ml-1 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
             </button>
-            <div className="flex flex-col flex-grow text-center md:text-left w-full">
-              <div className="font-serif text-2xl font-bold text-caramel">The Vulnerability of Touch</div>
-              <div className="font-sans text-[10px] text-white/50 mt-2 uppercase tracking-widest font-semibold">Episode 003 &mdash; 42 Min</div>
-              <div className="mt-4 flex items-center gap-4 w-full">
-                <span className="font-mono text-xs opacity-50">00:00</span>
+            <div className="flex flex-col flex-grow text-left w-full overflow-hidden">
+              <div className="font-serif text-lg md:text-2xl font-bold text-caramel truncate">The Vulnerability of Touch</div>
+              <div className="font-sans text-[8px] md:text-[10px] text-white/50 mt-1 md:mt-2 uppercase tracking-widest font-semibold truncate">Episode 003 &mdash; 42 Min</div>
+              <div className="mt-3 md:mt-4 flex items-center gap-2 md:gap-4 w-full hidden sm:flex">
+                <span className="font-mono text-[10px] md:text-xs opacity-50">00:00</span>
                 <div className="h-1.5 bg-white/10 rounded-full flex-grow relative overflow-hidden cursor-pointer">
                   <div className="absolute top-0 left-0 h-full bg-caramel w-1/3 rounded-full"></div>
                 </div>
-                <span className="font-mono text-xs opacity-50">42:00</span>
+                <span className="font-mono text-[10px] md:text-xs opacity-50">42:00</span>
               </div>
             </div>
             <div className="shrink-0 flex gap-4 hidden lg:flex">
